@@ -1,5 +1,5 @@
 {
-  "name": "firebase",
+  "name": "firebase-app",
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
@@ -8,7 +8,8 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "postinstall": "cp -u src/firebase.config.example.ts src/firebase.config.ts"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +21,9 @@
     "@angular/platform-browser": "~2.0.0",
     "@angular/platform-browser-dynamic": "~2.0.0",
     "@angular/router": "~3.0.0",
+    "angularfire2": "^2.0.0-beta.5",
     "core-js": "^2.4.1",
+    "firebase": "^3.4.1",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.6.23"
